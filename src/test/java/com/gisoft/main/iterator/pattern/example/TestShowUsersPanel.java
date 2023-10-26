@@ -3,11 +3,11 @@ package com.gisoft.main.iterator.pattern.example;
 import org.junit.Test;
 import org.junit.Before;
 
-public class ShowUsersPanelTest {
+public class TestShowUsersPanel {
     
     private ShowUsersPanel panel;
             
-    public ShowUsersPanelTest() {}
+    public TestShowUsersPanel() {}
     
     @Before
     public void setUp(){
