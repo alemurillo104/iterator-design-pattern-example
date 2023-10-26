@@ -1,4 +1,3 @@
-
 package com.gisoft.facebook;
 
 import com.gisoft.iterator.pattern.Iterator;
@@ -26,6 +25,4 @@ public class FacebookIterator implements Iterator<FacebookUser> {
     public boolean isDone() {
         return (this.currentPosition) == users.size();
     }
-    
-    // [ 10, 5, 6 ] size = 3,  0 1 2 -> 2 == 3 
 }
