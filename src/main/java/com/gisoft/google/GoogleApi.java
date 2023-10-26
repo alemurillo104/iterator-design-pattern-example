@@ -1,4 +1,4 @@
-package com.my.company.classes;
+package com.gisoft.google;
 
 public class GoogleApi {
     public GoogleUser[] getGoogleUsers(){
