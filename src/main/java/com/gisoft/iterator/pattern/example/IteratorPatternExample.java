@@ -1,6 +1,6 @@
-package com.mycompany.ejerciciopatroniterator;
+package com.gisoft.iterator.pattern.example;
 
-public class EjercicioPatronIterator {
+public class IteratorPatternExample {
 
     public static void main(String[] args) {
         System.out.println("Grupo 1 - Ejercicio Patron Iterator"); 
@@ -10,5 +10,8 @@ public class EjercicioPatronIterator {
         
         //FacebookUsers
         panel.showFacebookUsers();
+        
+        //CreUsers
+        panel.showCreUsers();
     }
 }

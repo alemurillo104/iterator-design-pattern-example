@@ -1,6 +1,4 @@
-
-package com.mycompany.ejerciciopatroniterator;
-
+package com.gisoft.iterator.pattern.example;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -27,6 +25,9 @@ public class TestShowPanelUsersUsingIteratorPattern {
         this.panel.showFacebookUsers();
     }
     
-    
-    
+    @Test
+    public void testShowCreUsers() {
+        System.out.println("showCreUsers");
+        this.panel.showCreUsers();
+    }
 }

@@ -1,6 +1,9 @@
+package com.gisoft.iterator.pattern.example;
 
-package com.mycompany.ejerciciopatroniterator;
-
+import com.gisoft.cre.CreAggregate;
+import com.gisoft.cre.CreApi;
+import com.gisoft.cre.CreIterator;
+import com.gisoft.cre.CreUserData;
 import com.gisoft.facebook.FacebookAggregate;
 import com.gisoft.facebook.FacebookApi;
 import com.gisoft.facebook.FacebookIterator;
@@ -14,10 +17,12 @@ public class ShowPanelUsersUsingIteratorPattern {
    
     private final FacebookAggregate facebookAggregate;
     private final GoogleAggregate googleAggregate;
+    private final CreAggregate creAggregate;
     
     public ShowPanelUsersUsingIteratorPattern(){
         this.facebookAggregate = new FacebookAggregate(new FacebookApi().getFacebookUsers());
         this.googleAggregate = new GoogleAggregate(new GoogleApi().getGoogleUsers());
+        this.creAggregate = new CreAggregate(new CreApi().getCREinfo());
     }
     
     public void showFacebookUsers(){
@@ -33,6 +38,14 @@ public class ShowPanelUsersUsingIteratorPattern {
         while (!iterator.isDone()) {            
             GoogleUser user = iterator.next();
             System.out.println("Nombre: " + user.getName() + " - Email: " + user.getEmail());
+        }
+    }
+    
+    public void showCreUsers(){
+        CreIterator iterator = (CreIterator) this.creAggregate.createIterator();
+        while (!iterator.isDone()) {            
+            CreUserData user = iterator.next();
+            System.out.println("Nombre: " + user.getName()+ " - Address: " + user.getAddress() + " - Payment: " + user.getPayment());
         }
     }
 }
