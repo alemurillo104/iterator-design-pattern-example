@@ -1,8 +1,7 @@
-
-package com.mycompany.ejerciciopatroniterator;
+package com.gisoft.main.iterator.pattern.example;
 
 import com.gisoft.cre.CreApi;
-import com.gisoft.cre.UserData;
+import com.gisoft.cre.CreUserData;
 import com.gisoft.facebook.FacebookApi;
 import com.gisoft.facebook.FacebookUser;
 import com.gisoft.google.GoogleApi;
@@ -44,7 +43,7 @@ public class ShowUsersPanel {
     public void showCreUsers(){
         var users = this.creApi.getCREinfo();
         
-        for (Map.Entry<Integer,UserData> user : users.entrySet()) {
+        for (Map.Entry<Integer,CreUserData> user : users.entrySet()) {
             
             var userData = user.getValue();
             System.out.println("Nombre: " + userData.getName()+ " - Address: " + userData.getAddress() + " - Payment: " + userData.getPayment());
