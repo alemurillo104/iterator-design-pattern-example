@@ -4,13 +4,14 @@ import org.junit.Test;
 import org.junit.Before;
 
 public class TestShowUsersPanel {
-    
+
     private ShowUsersPanel panel;
-            
-    public TestShowUsersPanel() {}
-    
+
+    public TestShowUsersPanel() {
+    }
+
     @Before
-    public void setUp(){
+    public void setUp() {
         this.panel = new ShowUsersPanel();
     }
 
@@ -25,7 +26,7 @@ public class TestShowUsersPanel {
         System.out.println("showFaceboookUsers");
         this.panel.showFaceboookUsers();
     }
-    
+
     @Test
     public void testShowCreUsers() {
         System.out.println("showCreUsers");
