@@ -1,39 +1,53 @@
 
 package com.mycompany.ejerciciopatroniterator;
 
+import com.gisoft.cre.CreApi;
+import com.gisoft.cre.UserData;
 import com.gisoft.facebook.FacebookApi;
 import com.gisoft.facebook.FacebookUser;
 import com.gisoft.google.GoogleApi;
 import com.gisoft.google.GoogleUser;
+import java.util.Map;
 
 public class ShowUsersPanel {
     
     private final GoogleApi googleApi;
     private final FacebookApi facebookApi;
+    private final CreApi creApi;
     
     public ShowUsersPanel() {
         this.googleApi = new GoogleApi();
         this.facebookApi = new FacebookApi();
+        this.creApi = new CreApi();
     }
     
     public void showGoogleUsers(){
         
-        var googleUsers = this.googleApi.getGoogleUsers();
+        var users = this.googleApi.getGoogleUsers();
         
-        for (int i = 0; i < googleUsers.length; i++) {
-            GoogleUser item = googleUsers[i];
-            System.out.println("Nombre: " + item.getName() + " - Email: " + item.getEmail());
+        for (int i = 0; i < users.length; i++) {
+            GoogleUser user = users[i];
+            System.out.println("Nombre: " + user.getName() + " - Email: " + user.getEmail());
         }
     }
     
     public void showFaceboookUsers(){
         
-        var facebookUsers = this.facebookApi.getFacebookUsers();
+        var users = this.facebookApi.getFacebookUsers();
         
-        for (FacebookUser facebookUser : facebookUsers) {
-            FacebookUser item = facebookUser;
-            System.out.println("Nombre: " + item.getFbName()+ " - Url: " + item.getFbUrl());
+        for (FacebookUser facebookUser : users) {
+            FacebookUser user = facebookUser;
+            System.out.println("Nombre: " + user.getFbName()+ " - Url: " + user.getFbUrl());
         }
     }
     
+    public void showCreUsers(){
+        var users = this.creApi.getCREinfo();
+        
+        for (Map.Entry<Integer,UserData> user : users.entrySet()) {
+            
+            var userData = user.getValue();
+            System.out.println("Nombre: " + userData.getName()+ " - Address: " + userData.getAddress() + " - Payment: " + userData.getPayment());
+        }
+    }
 }

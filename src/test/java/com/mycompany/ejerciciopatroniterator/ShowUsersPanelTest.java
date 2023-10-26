@@ -25,4 +25,10 @@ public class ShowUsersPanelTest {
         System.out.println("showFaceboookUsers");
         this.panel.showFaceboookUsers();
     }
+    
+    @Test
+    public void testShowCreUsers() {
+        System.out.println("showCreUsers");
+        this.panel.showCreUsers();
+    }
 }

@@ -10,5 +10,8 @@ public class EjercicioPatronIterator {
         
         //Facebook users
         panel.showFaceboookUsers();
+        
+        //Cre users
+        panel.showCreUsers();
     }
 }
