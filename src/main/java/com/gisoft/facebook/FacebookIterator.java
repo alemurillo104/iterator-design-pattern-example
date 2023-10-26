@@ -4,9 +4,9 @@ import com.gisoft.iterator.pattern.Iterator;
 import java.util.List;
 
 public class FacebookIterator implements Iterator<FacebookUser> {
-    
+
     private List<FacebookUser> users;
-    
+
     private int currentPosition = 0;
 
     public FacebookIterator(List<FacebookUser> users) {

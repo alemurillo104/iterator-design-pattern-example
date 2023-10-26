@@ -1,4 +1,3 @@
-
 package com.gisoft.facebook;
 
 import com.gisoft.iterator.pattern.Aggregate;

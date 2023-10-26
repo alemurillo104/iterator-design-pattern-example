@@ -1,4 +1,3 @@
-
 package com.gisoft.cre;
 
 import java.util.HashMap;

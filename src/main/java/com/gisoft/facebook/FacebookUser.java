@@ -1,4 +1,3 @@
-
 package com.gisoft.facebook;
 
 public class FacebookUser {
@@ -16,6 +15,5 @@ public class FacebookUser {
 
     public String getFbUrl() {
         return fbUrl;
-    }
-    
+    }   
 }
