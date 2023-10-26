@@ -1,4 +1,3 @@
-
 package com.gisoft.google;
 
 public class GoogleUser {
@@ -17,5 +16,4 @@ public class GoogleUser {
         this.name = name;
         this.email = email;
     }
-
 }

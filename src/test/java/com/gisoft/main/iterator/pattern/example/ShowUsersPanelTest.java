@@ -1,4 +1,4 @@
-package com.mycompany.ejerciciopatroniterator;
+package com.gisoft.main.iterator.pattern.example;
 
 import org.junit.Test;
 import org.junit.Before;
