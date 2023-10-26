@@ -1,4 +1,4 @@
-package com.gisoft.iterator.pattern.example;
+package com.gisoft.main.iterator.pattern.example;
 
 import com.gisoft.cre.CreAggregate;
 import com.gisoft.cre.CreApi;
